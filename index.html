@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prudhvi Raj Maddineni – Java Backend Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{--bg:#eef1f5;--surface:#fff;--ink:#16212c;--muted:#53606e;--line:#cdd5de;--accent:#0b5c9e;--ok:#1d7a4a;--panel:#13202e;--pink:#d7e3ef;--pk:#7fb8ea;--ps:#9ed8b0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"]{--bg:#0f1720;--surface:#16212c;--ink:#e6edf4;--muted:#9aa8b6;--line:#2a3846;--accent:#6db3ec;--ok:#6fd09b;--panel:#0a1119;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 4rem);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Source Serif 4",Georgia,serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:3px}
+.wrap{max-width:980px;margin:0 auto;padding:0 1.5rem}
+h1,h2,h3,.ui{font-family:"Bricolage Grotesque",system-ui,sans-serif}
+h1,h2,h3{line-height:1.1;margin:0}
+#bar{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);height:3px;background:var(--accent);transform:scaleX(0);transform-origin:0 50%;z-index:12}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:1.4rem;padding-top:.8rem;padding-bottom:.8rem;flex-wrap:wrap}
+nav a{font-weight:500;color:var(--muted);text-decoration:none;padding:.15rem 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--ink)}nav a.on{color:var(--ink);border-color:var(--accent)}
+nav .sp{flex:1}
+.tg{font:500 .9rem "Bricolage Grotesque",system-ui,sans-serif;background:none;color:var(--ink);border:1.5px solid var(--line);border-radius:99px;padding:.3rem .8rem;cursor:pointer}
+.hero{display:grid;grid-template-columns:1fr 1.05fr;gap:3rem;align-items:center;padding:3.5rem 0 4rem}
+.hero h1{font-size:clamp(2.6rem,6vw,4.3rem);font-weight:700;letter-spacing:-.03em}
+.role{font:500 1.3rem "Bricolage Grotesque",system-ui,sans-serif;color:var(--accent);margin:1rem 0 .8rem}
+.hero p{color:var(--muted);max-width:34em;margin:0 0 1.5rem}
+.live{display:inline-flex;align-items:center;gap:.5rem;font:500 .9rem "Bricolage Grotesque",system-ui,sans-serif;color:var(--ok);margin-bottom:1rem}
+.live i{width:9px;height:9px;border-radius:50%;background:var(--ok);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(29,122,74,.5)}70%{box-shadow:0 0 0 9px rgba(29,122,74,0)}100%{box-shadow:0 0 0 0 rgba(29,122,74,0)}}
+.btns{display:flex;gap:.7rem;flex-wrap:wrap}
+.btn{font:500 1rem "Bricolage Grotesque",system-ui,sans-serif;padding:.65rem 1.1rem;border-radius:6px;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink)}
+.btn.p{background:var(--ink);color:var(--bg)}
+.term{background:var(--panel);color:var(--pink);border-radius:12px;overflow:hidden;font:400 .85rem/1.65 "IBM Plex Mono",ui-monospace,Menlo,monospace}
+.ep{display:flex;gap:.4rem;flex-wrap:wrap;padding:.7rem .8rem;border-bottom:1px solid #243445}
+.ep button{font:inherit;font-size:.78rem;background:none;color:#9fb3c6;border:1px solid #2c3f52;border-radius:99px;padding:.2rem .65rem;cursor:pointer}
+.ep button[aria-pressed="true"]{background:#1f3a54;color:#fff;border-color:#3e6a94}
+.term .bd{padding:1rem 1.2rem 1.2rem;min-height:21rem}
+#req{color:#8ea2b5}.st{color:#6fd09b;margin:.1rem 0 .6rem}
+#out{margin:0;font:inherit;white-space:pre-wrap;word-break:break-word}
+#out::after{content:"";display:inline-block;width:.55em;height:1em;background:var(--pink);vertical-align:-.15em;animation:bl 1.1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.k{color:var(--pk)}.s{color:var(--ps)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats div{padding:1.4rem 1rem;border-left:1px solid var(--line)}.stats div:first-child{border-left:0;padding-left:0}
+.stats b{display:block;font:700 2rem/1 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.02em}
+.stats span{color:var(--muted);font-size:.9rem;display:block;margin-top:.4rem;line-height:1.35}
+section{padding:4rem 0 1rem}
+h2{font-size:2rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.5rem}
+.lede{color:var(--muted);max-width:40em;margin:0 0 2rem}
+.proj{background:var(--surface);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:1.3rem 1.4rem;margin-bottom:1rem}
+.proj .top{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:baseline}
+.proj h3{font-size:1.25rem}
+.soon{font:500 .85rem "Bricolage Grotesque",system-ui,sans-serif;color:var(--muted);border:1px dashed var(--line);padding:.15rem .65rem;border-radius:99px}
+.proj p{margin:.4rem 0 .5rem;max-width:42em}
+.tags{font:400 .8rem "IBM Plex Mono",ui-monospace,monospace;color:var(--muted)}
+details>summary{cursor:pointer;list-style:none;font-weight:500}
+details>summary::-webkit-details-marker{display:none}
+.proj summary{margin-top:.8rem;font-family:"Bricolage Grotesque",system-ui,sans-serif;color:var(--accent)}
+.proj summary::before{content:"+";display:inline-block;width:1.1rem}
+.proj details[open]>summary::before{content:"–"}
+.flow{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem 0;margin:.9rem 0 .6rem;padding:0;font:500 .82rem "IBM Plex Mono",ui-monospace,monospace}
+.flow li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.35rem .7rem}
+.flow li+li{margin-left:1.5rem;position:relative}
+.flow li+li::before{content:"→";position:absolute;left:-1.25rem;top:.3rem;color:var(--muted)}
+.why{margin:0;color:var(--muted);font-size:.97rem}
+.chips{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.4rem}
+.chips button{font:500 .9rem "Bricolage Grotesque",system-ui,sans-serif;background:none;color:var(--ink);border:1.5px solid var(--line);border-radius:99px;padding:.3rem .9rem;cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.pills{display:flex;flex-wrap:wrap;gap:.5rem}
+.pill{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:.3rem .7rem;font:400 .85rem "IBM Plex Mono",ui-monospace,monospace;transition:opacity .25s,transform .25s}
+.pill.off{opacity:.18;transform:scale(.96)}
+.job{border-left:2px solid var(--line);padding:0 0 .4rem 1.6rem;margin-left:.4rem;position:relative}
+.job::before{content:"";position:absolute;left:-7px;top:.55rem;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.job.now::before{background:var(--ok);border-color:var(--ok)}
+.job summary{padding:.2rem 0 1rem}
+.job h3{font-size:1.2rem;display:inline}
+.when{display:block;font:400 .8rem "IBM Plex Mono",ui-monospace,monospace;color:var(--muted);margin-top:.2rem}
+.job ul{margin:-.3rem 0 1.4rem;padding-left:1.1rem;max-width:44em;color:var(--muted)}
+.job li{margin-bottom:.35rem}
+.contact a.big{display:block;font:500 1.5rem "Bricolage Grotesque",system-ui,sans-serif;margin:.3rem 0}
+footer{margin-top:3rem;padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.js .rv.in{opacity:1;transform:none}
+@media (max-width:780px){.hero{grid-template-columns:1fr;gap:2rem;padding-top:2rem}.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(3){border-left:0;padding-left:0}.stats div{border-top:1px solid var(--line)}.stats div:nth-child(-n+2){border-top:0}nav .wrap{gap:1rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.live i,#out::after{animation:none}.js .rv{opacity:1;transform:none;transition:none}.pill{transition:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav aria-label="Sections"><div class="wrap">
+  <a href="#work">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+  <span class="sp"></span><button class="tg" id="tg" type="button" aria-label="Switch colour theme">Dark mode</button>
+</div></nav>
+
+<main class="wrap">
+  <header class="hero">
+    <div>
+      <h1>Prudhvi Raj Maddineni</h1>
+      <div class="role">Java backend engineer</div>
+      <p>I build secure, reliable microservices with Java and Spring Boot. Ten years across UK public sector and financial services, on AWS and Azure. Based in Leicester, with indefinite leave to remain, so no sponsorship needed.</p>
+      <div class="btns"><a class="btn p" href="mailto:raj9tech@gmail.com">Email me</a><a class="btn" href="https://linkedin.com/in/prudhvi92">LinkedIn</a><a class="btn" href="https://github.com/raj999pm">GitHub</a></div>
+    </div>
+    <div class="term" aria-label="Interactive API explorer. Choose an endpoint to see a response about Prudhvi.">
+      <div class="ep" role="group" aria-label="Endpoints">
+        <button type="button" data-p="/engineers/prudhvi">/engineers/prudhvi</button>
+        <button type="button" data-p="/skills">/skills</button>
+        <button type="button" data-p="/experience">/experience</button>
+        <button type="button" data-p="/contact">/contact</button>
+      </div>
+      <div class="bd" aria-live="polite"><div id="req"></div><div class="st">200 OK</div><pre id="out"></pre></div>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div><b data-to="10" data-suf="+">0</b><span>years building production services</span></div>
+    <div><b data-to="15" data-suf="%">0</b><span>lower database latency on critical paths at HMCTS</span></div>
+    <div><b data-to="20" data-suf="%">0</b><span>faster front-end load times at CricClubs</span></div>
+    <div><b data-to="5000" data-suf="+">0</b><span>daily users on APIs I designed</span></div>
+  </div>
+
+  <section id="work">
+    <h2>Projects</h2>
+    <p class="lede">My client work is confidential, so these are public projects that show how I design and test backend systems. Open one to see its architecture.</p>
+
+    <article class="proj rv"><div class="top"><h3>Event-driven payments service</h3><span class="soon">Repo coming soon</span></div>
+      <p>Orders flow through Kafka to idempotent consumers with retries and a reconciliation job, so partial failures never leave data inconsistent.</p>
+      <div class="tags">Java 25, Spring Boot, Kafka, PostgreSQL</div>
+      <details><summary>Show architecture</summary>
+        <ol class="flow"><li>Client</li><li>Orders API</li><li>Kafka topic</li><li>Idempotent consumer</li><li>PostgreSQL</li></ol>
+        <p class="why">Idempotency keys make retries safe to repeat, and a reconciliation job compares the ledger with the broker.</p></details></article>
+
+    <article class="proj rv"><div class="top"><h3>Legacy record mapper</h3><span class="soon">Repo coming soon</span></div>
+      <p>Turns fixed-width, COBOL-style records into clean JSON APIs, with the mapping rules covered by unit and integration tests.</p>
+      <div class="tags">Java 25, Spring Boot, JUnit 5, Mockito</div>
+      <details><summary>Show architecture</summary>
+        <ol class="flow"><li>Fixed-width file</li><li>Record parser</li><li>Field mapper</li><li>REST and JSON API</li></ol>
+        <p class="why">Each mapping rule is a small tested unit, so a layout change touches one place.</p></details></article>
+
+    <article class="proj rv"><div class="top"><h3>Secured REST API on Kubernetes</h3><span class="soon">Repo coming soon</span></div>
+      <p>OAuth 2.0 authentication, OpenAPI documentation, Docker images and a CI pipeline that deploys to a cluster.</p>
+      <div class="tags">Spring Security, OAuth 2.0, Docker, Kubernetes</div>
+      <details><summary>Show architecture</summary>
+        <ol class="flow"><li>Client</li><li>OAuth 2.0 token</li><li>Spring Security</li><li>REST API</li><li>Kubernetes</li></ol>
+        <p class="why">Every request is authenticated at the edge of the service, and the pipeline builds, tests and ships each commit.</p></details></article>
+
+    <article class="proj rv"><div class="top"><h3>Observability demo</h3><span class="soon">Repo coming soon</span></div>
+      <p>The same service instrumented with structured logs, metrics and alerts, showing how to spot a runtime fault before users do.</p>
+      <div class="tags">CloudWatch, Application Insights, SonarQube</div>
+      <details><summary>Show architecture</summary>
+        <ol class="flow"><li>Service</li><li>Logs and metrics</li><li>Dashboards</li><li>Alerts</li></ol>
+        <p class="why">Alerts fire on symptoms users feel, such as error rate and latency, rather than on raw server load.</p></details></article>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <p class="lede">Open a role for the detail.</p>
+    <details class="job now rv" open><summary><h3>Backend Java Developer (contract), DWP via IBM</h3><span class="when">Aug 2026 to present, London</span></summary>
+      <ul><li>Build Spring Boot REST APIs on Java 21 to modernise legacy systems.</li><li>Map mainframe data structures to Java microservices during a phased cutover.</li><li>Write unit and integration tests with JUnit 5 and Mockito, test-first.</li><li>Monitor service health with CloudWatch logs and metrics.</li></ul></details>
+    <details class="job rv"><summary><h3>Senior Software Engineer (contract), Capital One via UST Global</h3><span class="when">Oct 2025 to Mar 2026, Nottingham</span></summary>
+      <ul><li>Led cloud-native backend services on AWS, deployed on Kubernetes with CloudFormation pipelines.</li><li>Built event-driven REST APIs that keep data consistent through partial failures.</li><li>Reduced reconciliation errors with better retry, idempotency and reconciliation logic.</li></ul></details>
+    <details class="job rv"><summary><h3>Full Stack Developer, HMCTS via Cognizant</h3><span class="when">Jul 2021 to Aug 2025, London</span></summary>
+      <ul><li>Ran secure microservices for four years to Government Digital Service standards.</li><li>Owned authentication, error handling and data mapping across service boundaries.</li><li>Cut database latency by 15% by tuning PostgreSQL, MySQL and Cosmos DB queries and indexes.</li><li>Managed CI/CD in GitLab CI and monitored with Azure Monitor and Application Insights.</li></ul></details>
+    <details class="job rv"><summary><h3>Earlier roles in India</h3><span class="when">2014 to 2019, Hyderabad and Bengaluru</span></summary>
+      <ul><li>CricClubs: improved front-end load times by 20% and built APIs for live sports data on AWS.</li><li>VW Technologies: built REST endpoints for 5,000+ daily users and fixed multi-threading defects.</li><li>Boyallas Marketing Solutions: built e-commerce back ends with payment and shipping integrations.</li></ul></details>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p class="lede">The tools I’m happy to be interviewed on. Filter by area.</p>
+    <div class="chips" role="group" aria-label="Filter skills">
+      <button type="button" data-f="all" aria-pressed="true">All</button><button type="button" data-f="java" aria-pressed="false">Java and Spring</button><button type="button" data-f="api" aria-pressed="false">APIs and security</button><button type="button" data-f="msg" aria-pressed="false">Messaging</button><button type="button" data-f="cloud" aria-pressed="false">Cloud and delivery</button><button type="button" data-f="data" aria-pressed="false">Data</button><button type="button" data-f="qa" aria-pressed="false">Quality and monitoring</button>
+    </div>
+    <div class="pills" id="pills"></div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Get in touch</h2>
+    <p class="lede">Available for backend and microservices roles across the UK.</p>
+    <a class="big" href="mailto:raj9tech@gmail.com">raj9tech@gmail.com</a>
+    <a class="big" href="https://linkedin.com/in/prudhvi92">linkedin.com/in/prudhvi92</a>
+    <a class="big" href="https://github.com/raj999pm">github.com/raj999pm</a>
+  </section>
+  <footer>© 2026 Prudhvi Raj Maddineni</footer>
+</main>
+
+<script>
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* API explorer */
+const API={
+'/engineers/prudhvi':{role:'Java Backend Engineer',years:10,location:'Leicester, UK',rightToWork:'ILR, no sponsorship',sectors:['Public sector','Financial services'],focus:['Spring Boot','Kafka','AWS','Kubernetes']},
+'/skills':{languages:['Java 25','Java 21','Kotlin','Python','SQL'],frameworks:['Spring Boot','Spring Security','Spring Cloud','Hibernate'],messaging:['Kafka','RabbitMQ'],platform:['AWS','Azure','Docker','Kubernetes']},
+'/experience':[{company:'DWP via IBM',role:'Backend Java Developer',from:'2026-08',to:'present'},{company:'Capital One via UST Global',role:'Senior Software Engineer',from:'2025-10',to:'2026-03'},{company:'HMCTS via Cognizant',role:'Full Stack Developer',from:'2021-07',to:'2025-08'}],
+'/contact':{email:'raj9tech@gmail.com',linkedin:'linkedin.com/in/prudhvi92',github:'github.com/raj999pm'}};
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const hl=t=>esc(t).replace(/"(?:[^"\\]|\\.)*"(:)?/g,(m,c)=>c?'<span class="k">'+m.slice(0,-1)+'</span>:':'<span class="s">'+m+'</span>');
+let timer;
+function play(p){
+  clearInterval(timer);
+  $$('.ep button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.p===p));
+  $('#req').textContent='GET '+p;
+  const out=$('#out'),txt=JSON.stringify(API[p],null,2);
+  if(reduce){out.innerHTML=hl(txt);return}
+  let i=0;out.textContent='';
+  timer=setInterval(()=>{i+=4;out.textContent=txt.slice(0,i);if(i>=txt.length){clearInterval(timer);out.innerHTML=hl(txt)}},14);
+}
+$$('.ep button').forEach(b=>b.addEventListener('click',()=>play(b.dataset.p)));
+play('/engineers/prudhvi');
+/* Skills filter */
+const SK=[['java','Java 25'],['java','Java 21'],['java','Java 17'],['java','Kotlin'],['java','Spring Boot'],['java','Spring Cloud'],['java','Hibernate / JPA'],
+['api','REST / JSON'],['api','OpenAPI'],['api','OAuth 2.0'],['api','Spring Security'],['api','Microservices'],
+['msg','Apache Kafka'],['msg','RabbitMQ'],['msg','Event-driven design'],
+['cloud','AWS'],['cloud','Azure'],['cloud','Docker'],['cloud','Kubernetes'],['cloud','Jenkins'],['cloud','GitLab CI'],['cloud','CloudFormation'],
+['data','PostgreSQL'],['data','MySQL'],['data','Oracle'],['data','MongoDB'],['data','Cosmos DB'],
+['qa','TDD / BDD'],['qa','JUnit 5'],['qa','Mockito'],['qa','SonarQube'],['qa','CloudWatch'],['qa','Application Insights']];
+$('#pills').innerHTML=SK.map(([g,n])=>'<span class="pill" data-g="'+g+'">'+n+'</span>').join('');
+$$('.chips button').forEach(b=>b.addEventListener('click',()=>{
+  $$('.chips button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  $$('.pill').forEach(p=>p.classList.toggle('off',b.dataset.f!=='all'&&p.dataset.g!==b.dataset.f));
+}));
+/* Reveal, counters, nav highlight */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+$$('.rv').forEach(el=>io.observe(el));
+const co=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;co.unobserve(e.target);
+  const to=+e.target.dataset.to,suf=e.target.dataset.suf,t0=performance.now();
+  if(reduce){e.target.textContent=to.toLocaleString('en-GB')+suf;return}
+  (function f(t){const k=Math.min((t-t0)/1100,1),v=Math.round(to*(1-Math.pow(1-k,3)));e.target.textContent=v.toLocaleString('en-GB')+suf;if(k<1)requestAnimationFrame(f)})(t0);
+}),{threshold:.6});
+$$('[data-to]').forEach(el=>co.observe(el));
+const no=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$('nav a').forEach(a=>a.classList.toggle('on',a.hash==='#'+e.target.id))}),{rootMargin:'-40% 0px -55% 0px'});
+$$('section').forEach(s=>no.observe(s));
+addEventListener('scroll',()=>{const h=document.documentElement;$('#bar').style.transform='scaleX('+(h.scrollTop/Math.max(h.scrollHeight-h.clientHeight,1))+')'},{passive:true});
+/* Theme toggle */
+$('#tg').addEventListener('click',()=>{
+  const r=document.documentElement,dark=r.dataset.theme!=='dark';
+  r.dataset.theme=dark?'dark':'light';
+  $('#tg').textContent=dark?'Light mode':'Dark mode';
+});
+</script>
+</body>
+</html>
